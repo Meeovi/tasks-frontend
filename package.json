@@ -1,22 +1,22 @@
 {
-   "name": "starter-template",
+   "name": "tasks-frontend",
    "type": "module",
    "version": "0.0.5",
    "description": "Official M Framework starter template.",
-   "author": "M Framework Labs (https://framework.meeovi.com)",
-   "homepage": "https://framework.meeovi.com",
+   "author": "M Framework Labs (https://tasks.meeovi.com)",
+   "homepage": "https://tasks.meeovi.com",
    "repository": {
       "type": "git",
-      "url": "git+https://github.com/Meeovi/Meeovi-Starter-Template"
+      "url": "git+https://github.com/Meeovi/tasks-frontend"
    },
    "bugs": {
-      "url": "https://github.com/Meeovi/Meeovi-Starter-Template/issues"
+      "url": "https://github.com/Meeovi/tasks-frontend/issues"
    },
    "license": "MIT",
    "private": true,
    "scripts": {
       "starter-commit": "git add . && git commit -m \"ready for update\"",
-      "starter-update": "git pull \"https://github.com/Meeovi/Meeovi-Starter-Template\"",
+      "starter-update": "git pull \"https://github.com/Meeovi/tasks-frontend\"",
       "dev": "nuxt dev --host 0.0.0.0",
       "dev-sw": "SW=true nuxi dev",
       "build": "nuxt build",

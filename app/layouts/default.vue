@@ -29,12 +29,10 @@
             </div>
           </div>
 
-          <FooterNav />
+          <copyright />
           <!---->
         </v-main>
       </v-app>
-      
-      <mobileNav />      
     </v-responsive>
   </div>
 </template>
@@ -42,7 +40,7 @@
 <script setup lang="ts">
   import Header from '../components/menus/Header.vue'
   import sidebarnav from '../components/menus/sidebar/sidebarnav.vue'
-  import FooterNav from '../components/menus/FooterNav.vue'
+  import copyright from '../components/blocks/copyright.vue'
   import mobileNav from '../components/menus/mobile/mobileNav.vue'
   import OfflineAlert from '#shared/app/components/alerts/OfflineAlert.vue'
   import {
@@ -94,19 +92,5 @@
     htmlAttrs: {
       lang: 'en'
     }
-  })
-
-  const title = process.env.NUXT_PUBLIC_APP_NAME || 'Nuxt AI Chatbot Template'
-  const description = process.env.NUXT_PUBLIC_APP_DESCRIPTION ||
-    'A full-featured, hackable Nuxt AI chatbot template made with Nuxt UI.'
-
-
-  useSeoMeta({
-    title,
-    description,
-    ogTitle: title,
-    ogDescription: description,
-    ogImage: process.env.NUXT_PUBLIC_APP_OG_IMAGE || 'https://ui.nuxt.com/assets/templates/nuxt/chat-light.png',
-    twitterCard: 'summary_large_image'
   })
 </script>

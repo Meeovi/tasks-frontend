@@ -1,19 +1,9 @@
 <template>
   <div class="contentPage">
-    <Pagebar v-if="page?.type !== 'Page'" />
+    <div v-if="page?.slug === 'about-meeovi-tasks'"><about :about="page" /></div>
 
-    <br>
-
-    <div class="contentSection">
+    <div v-else class="contentSection">
       <v-card elevation="0">
-        <v-img class="align-end text-white" height="200" src="assets/images/background4.jpg" cover>
-          <v-card-title style="font-size: 35px;">{{ page?.name }}</v-card-title>
-        </v-img>
-
-        <v-card-subtitle class="pt-4">
-          Published: {{ page?.date_created ? new Date(page.date_created).toLocaleDateString() : '' }}
-        </v-card-subtitle>
-
         <v-card-text v-html="page?.content"></v-card-text>
 
         <v-card-actions>
@@ -29,7 +19,7 @@
     ref,
     watch
   } from 'vue'
-  import Pagebar from '../components/menus/page/pagebar.vue'
+  import about from '../components/blocks/page/about.vue'
   import share from '#social/app/components/blocks/share.vue'
 
   const route = useRoute()
@@ -76,9 +66,5 @@
     theme: '#4ADE80',
     headline: '',
     colorMode: 'dark',
-  })
-
-  definePageMeta({
-    layout: 'nolive',
   })
 </script>
